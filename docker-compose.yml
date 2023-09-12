@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.3"
 services:
   # XSS Hunter Express service
   xsshunterexpress:
@@ -23,7 +23,7 @@ services:
       - CONTROL_PANEL_ENABLED=true
       # Whether or not to enable email notifications via
       # SMTP for XSS payload fires.
-      - SMTP_EMAIL_NOTIFICATIONS_ENABLED=true
+      - SMTP_EMAIL_NOTIFICATIONS_ENABLED=false
       - SMTP_HOST=smtp.gmail.com
       - SMTP_PORT=465
       - SMTP_USE_TLS=true
@@ -64,7 +64,7 @@ services:
   # with a default password of "xsshunterexpress". Do not expose it
   # externally. If you do, be sure to change the password.
   postgresdb:
-    image: postgres
+    image: postgres:15.2
     restart: always
     environment:
       # This is a volume mounted into the container
