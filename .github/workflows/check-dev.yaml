@@ -5,6 +5,8 @@ name: Redscan Scanner CD on Azure
 on:
   pull_request:
     branches: [ main ]
+  push:
+    branches: [ main ]
 
 jobs:
   dev:
