@@ -64,7 +64,7 @@ jobs:
       - name: Require manual approval of development server changes
         uses: trstringer/manual-approval@v1
         with:
-          secret: ${{ secrets.TOKEN }}
+          secret: ${{ github.TOKEN }}
           approvers: axrk
           issue-title: "Deploying new version to prod from dev"
 
