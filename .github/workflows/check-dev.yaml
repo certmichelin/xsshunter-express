@@ -1,4 +1,4 @@
-# This workflow will deploy code updates on Azure pre-prod instance
+# This workflow will deploy code updates on Azure dev instance of XSS-Hunter and on prod instance after verifications
 
 name: XSSHunter CD on Azure
 
@@ -49,3 +49,5 @@ jobs:
           script: |
             cd ~/xsshunter-express
             git pull
+            docker-compose up xsshunterexpress
+
