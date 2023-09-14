@@ -44,7 +44,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST_DEV }}
           username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          key: ${{ secrets.SSH_KEY_DEV }}
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd ~/xsshunter-express
@@ -96,7 +96,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST_PROD }}
           username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          key: ${{ secrets.SSH_KEY_PROD }}
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd ~/xsshunter-express
