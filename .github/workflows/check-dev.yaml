@@ -34,7 +34,7 @@ jobs:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          #enable-AzPSSession: true 
+          enable-AzPSSession: true 
 
       - name: Checkout
         uses: actions/checkout@v1
@@ -47,5 +47,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            whoami
-            ls -al
+            cd ~/xsshunter-express
+            git pull
